@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+
+  app1:
+    build: ./app1
+    container_name: app1
+    restart: always
+    environment:
+      - APP_NAME=FLASKAPP1
+    expose:
+      - 8000
+    network_mode: "host"
+
+  app2:
+    build: ./app2
+    container_name: app2
+    restart: always
+    environment:
+      - APP_NAME=FLASKAPP2
+    expose:
+      - 8001
+    network_mode: "host"
+
+  nginx-master:
+    build: ./nginx
+    container_name: nginx-master
+    restart: always
+    network_mode: "host"

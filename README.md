@@ -18,3 +18,4 @@ http://{YOUR_IP/DOMAIN}
 
 do f5 a multiple times to see nginx load balancing between the apps
 
+ 
